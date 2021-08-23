@@ -17,6 +17,8 @@
     justify-content: space-between;
     align-content: flex-start;
     align-self: stretch;
+    justify-self: stretch;
+    width: 100%;
 }
 
 .row {
