@@ -29,25 +29,37 @@ export function renderProduct(productData) {
     const image = document.createElement('img');
     const colDiv = document.createElement('div');
     const rowDiv = document.createElement('div');
+    const rowDiv2 = document.createElement('div');
     const h3 = document.createElement('h3');
     const priceSpan = document.createElement('span');
     const paragraph = document.createElement('p');
     const categorySpan = document.createElement('span');
+    const buyButton = document.createElement('button');
 
     li.id = productData.id;
     li.className = 'cat';
     image.src = productData.image;
     colDiv.className = 'col';
     rowDiv.className = 'row';
+    rowDiv2.className = 'row';
     h3.textContent = productData.name;
     priceSpan.className = 'price-span';
     priceSpan.textContent = `Price: ${productData.price}`;
     paragraph.textContent = productData.description;
     categorySpan.textContent = `Category: ${productData.category}`;
+    buyButton.textContent = 'Buy Now';
+    buyButton.addEventListener('click', () => {
+        if (productData.name === 'Stella') {
+            alert('YOU CAN\'T HAVE HER');
+        } else {
+            alert('Congratulations, you purchased ' + productData.name + '!');
+        }
+    });
     
-
+    rowDiv2.appendChild(priceSpan);
+    rowDiv2.appendChild(buyButton);
     rowDiv.appendChild(h3);
-    rowDiv.appendChild(priceSpan);
+    rowDiv.appendChild(rowDiv2);
     colDiv.appendChild(rowDiv);
     colDiv.appendChild(paragraph);
     colDiv.appendChild(categorySpan);

@@ -14,9 +14,12 @@ test('time to test a function', (expect) => {
             '<div class="col">' +
                 '<div class="row">' +
                     '<h3>Tony the Tiger</h3>' +
-                    '<span class="price-span">Price: $400m</span>' +
+                    '<div class="row">' +
+                        '<span class="price-span">Price: $400m</span>' +
+                        '<button>Buy Now</button>' +
+                    '</div>' +
                 '</div>' +
-                '<p>Tony the Tiger is looking for a loving home after the bankruptcy of Nabisco International. Good with kids, other cats, and dogs. Mildy in the uncanny valley. All IP included.</p>' +
+                '<p>Tony the Tiger is looking for a loving home after the bankruptcy of Kellogg\'s. Good with kids, other cats, and dogs. Mildy in the uncanny valley. All IP included.</p>' +
                 '<span>Category: Corporate Shill Cat</span>' +
             '</div>' +
         '</li>';
