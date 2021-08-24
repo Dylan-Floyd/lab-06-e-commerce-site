@@ -1,36 +1,57 @@
-import { calcItemTotal, findById } from '../utils.js';
+import { calcItemTotal, calcOrderTotal, findById } from '../utils.js';
 
 const test = QUnit.test;
 
-const testData = [
+const testCartData = [
     {
         id: 777,
-        dummyProp: 'asdf'
+        quantity: '2'
     },
     {
         id: 888,
-        dummyProp: 'asdf'
+        quantity: '2'
     },
     {
         id: 999,
-        dummyProp: 'asdf'
+        quantity: '2'
+    }
+];
+
+const testProducts = [
+    {
+        id: 777,
+        price: 1
+    },
+    {
+        id: 888,
+        price: 2
+    },
+    {
+        id: 999,
+        price: 3
     }
 ];
 
 test('findById should accept an array of objects and an id and return the corresponding object', expect => {
-    const expected = testData[0];
-    const actual = findById(testData, 777);
+    const expected = testCartData[0];
+    const actual = findById(testCartData, 777);
     expect.deepEqual(actual, expected);
 });
 
 test('findById should return null if it can\'t find the object', expect => {
     const expected = null;
-    const actual = findById(testData, 123);
+    const actual = findById(testCartData, 123);
     expect.equal(actual, expected);
 });
 
-test('calcItemTotal should take quantity=5 and price=10 and return 50', expect => {
-    const expected = 50;
+test('calcItemTotal should take quantity=5 and price=10 and return "$50.00"', expect => {
+    const expected = '$50.00';
     const actual = calcItemTotal(5, 10);
+    expect.equal(actual, expected);
+});
+
+test('calcOrderTotal should return correct order total in en-US USD format', expect => {
+    const expected = '$12.00';
+    const actual = calcOrderTotal(testCartData, testProducts);
     expect.equal(actual, expected);
 });
