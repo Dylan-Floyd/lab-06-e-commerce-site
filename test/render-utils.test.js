@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
-import { renderProduct } from '../render-utils.js';
-import { products } from '../product-data.js';
+import { renderProduct } from '../products/render-utils.js';
+import { products } from '../data/product-data.js';
 
 const test = QUnit.test;
 
@@ -10,12 +10,12 @@ test('time to test a function', (expect) => {
     const expected =
         // eslint-disable-next-line no-useless-escape
         '<li id=\"123\" class="cat">' +
-            '<img src="./assets/tony-the-tiger.jpg">' +
+            '<img src="../assets/tony-the-tiger.jpg">' +
             '<div class="col">' +
                 '<div class="row">' +
                     '<h3>Tony the Tiger</h3>' +
                     '<div class="row">' +
-                        '<span class="price-span">Price: $400m</span>' +
+                        '<span class="price-span">Price: $400,000,000.00</span>' +
                         '<button>Buy Now</button>' +
                     '</div>' +
                 '</div>' +
