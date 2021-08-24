@@ -1,4 +1,4 @@
-import { findById } from '../utils.js';
+import { calcItemTotal, findById } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -26,5 +26,11 @@ test('findById should accept an array of objects and an id and return the corres
 test('findById should return null if it can\'t find the object', expect => {
     const expected = null;
     const actual = findById(testData, 123);
+    expect.equal(actual, expected);
+});
+
+test('calcItemTotal should take quantity=5 and price=10 and return 50', expect => {
+    const expected = 50;
+    const actual = calcItemTotal(5, 10);
     expect.equal(actual, expected);
 });

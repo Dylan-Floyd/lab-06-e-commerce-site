@@ -6,3 +6,7 @@ export function findById(arrayOfObjects, id) {
         }
     }
 }
+
+export function calcItemTotal(quantity, price) {
+    return quantity * price;
+}
