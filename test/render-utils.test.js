@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import { renderProduct } from '../products/render-utils.js';
-import { products } from '../data/product-data.js';
+import { cats } from '../data/product-data.js';
 
 const test = QUnit.test;
 
@@ -26,7 +26,7 @@ test('renderProduct should accept a product and return the appropriate element.'
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = renderProduct(products[0]).outerHTML;
+    const actual = renderProduct(cats[0]).outerHTML;
 
     //Expect
     // Make assertions about what is expected versus the actual result

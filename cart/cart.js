@@ -1,15 +1,9 @@
-import { products } from '../data/product-data.js';
-import { cartData } from '../data/cart-data.js';
-import { renderLineItem } from './render-line-item.js';
-import { calcOrderTotal, findById } from '../utils.js';
+import { cats, fruits } from '../data/product-data.js';
+import { catCart, fruitCart } from '../data/cart-data.js';
+import { renderTable } from './cart-render-utils.js';
 
-const tableBody = document.querySelector('#table-body');
-const grandTotal = document.querySelector('#grand-total');
+const tableContainer = document.querySelector('#table-container');
 
-for (let cartItem of cartData) {
-    const productData = findById(products, cartItem.id);
-    const newRow = renderLineItem(cartItem, productData);
-    tableBody.appendChild(newRow);
-}
-
-grandTotal.textContent = calcOrderTotal(cartData, products);
+const catTable = renderTable(catCart, cats, 'Cat');
+const fruitTable = renderTable(fruitCart, fruits, 'Fruit');
+tableContainer.append(catTable, fruitTable);

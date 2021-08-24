@@ -1,8 +1,13 @@
 import { renderProduct } from './render-utils.js';
-import { products } from '../data/product-data.js';
+import { cats, fruits } from '../data/product-data.js';
 
-const list = document.getElementById('list');
+const catList = document.getElementById('cat-list');
+const fruitlist = document.getElementById('fruit-list');
 
-for (let productData of products) {
-    list.appendChild(renderProduct(productData));
+for (let cat of cats) {
+    catList.appendChild(renderProduct(cat));
+}
+
+for (let fruit of fruits) {
+    fruitlist.appendChild(renderProduct(fruit));
 }

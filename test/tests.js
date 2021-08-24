@@ -1,3 +1,3 @@
 import './render-utils.test.js';
 import './utils.test.js';
-import './render-line-item.test.js';
+import './cart-render-utils.test.js';

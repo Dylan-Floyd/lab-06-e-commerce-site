@@ -3,6 +3,7 @@ table.minimalistBlack {
     width: 100%;
     text-align: left;
     border-collapse: collapse;
+    margin: 10px 0px;
 }
 
 table.minimalistBlack td, table.minimalistBlack th {
@@ -43,4 +44,8 @@ table.minimalistBlack tfoot td {
     flex-direction: row;
     width: 100%;
     padding: 5px;
+}
+
+#table-container {
+    width: 100%;
 }

@@ -1,4 +1,4 @@
-export const products = [
+export const cats = [
     {
         id: 123,
         name: 'Tony the Tiger',
@@ -39,5 +39,48 @@ export const products = [
         description: 'I\'m ready to become part of your family! I think the life of a family cat could be the one for me... toys, beds, windows to look out of... yep, I\'m ready for all of that! I have been at the shelter for several months and have become one of the staff favorites! I am a sweet older boy who loves to cuddle, but I still have a playful side!',
         category: 'Abyssinian Mix',
         price: 25
+    }
+];
+
+export const fruits = [
+    {
+        id: 1,
+        name: 'Apple',
+        image: '../assets/apple.png',
+        description: 'A delicious gala apple.',
+        category: 'red',
+        price: .78
+    },
+    {
+        id: 2,
+        name: 'Orange',
+        image: '../assets/orange.png',
+        description: 'An okay orange from a local farm.',
+        category: 'orange',
+        price: .32
+    },
+    {
+        id: 3,
+        name: 'Banana',
+        image: '../assets/banana.png',
+        description: 'Dang, that\'s one good \'nanner.',
+        category: 'yellow',
+        price: 10
+    },
+    {
+        id: 4,
+        name: 'Kiwi',
+        image: '../assets/kiwi.png',
+        description: 'An S tier fruit.',
+        category: 'tan',
+        price: 2.73
+    },
+    {
+        id: 5,
+        name: 'Peach',
+        image: '../assets/peach.png',
+        description: 'I got these peaches out in Georgia, oh yeah yeah.',
+        category: 'pantone',
+        price: 3.99
     }
 ];
