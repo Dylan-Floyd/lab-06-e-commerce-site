@@ -4,7 +4,7 @@ import { products } from '../data/product-data.js';
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
+test('renderProduct should accept a product and return the appropriate element.', expect => {
     //Arrange
     // Set up your arguments and expectations
     const expected =
@@ -16,7 +16,7 @@ test('time to test a function', (expect) => {
                     '<h3>Tony the Tiger</h3>' +
                     '<div class="row">' +
                         '<span class="price-span">Price: $400,000,000.00</span>' +
-                        '<button>Buy Now</button>' +
+                        '<button>Add to Cart</button>' +
                     '</div>' +
                 '</div>' +
                 '<p>Tony the Tiger is looking for a loving home after the bankruptcy of Kellogg\'s. Good with kids, other cats, and dogs. Mildy in the uncanny valley. All IP included.</p>' +
