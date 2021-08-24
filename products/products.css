@@ -1,0 +1,55 @@
+.cat {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid grey;
+    border-top-width: 0px;
+}
+
+.cat:first-child {
+    border-top-width: 1px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-self: stretch;
+    justify-self: stretch;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.cat p {
+    margin: 10px 0px;
+}
+
+.cat img {
+    width: 175px;
+    height: 175px;
+    margin: 5px;
+}
+
+.cat span {
+    margin: 5px 0px;
+}
+
+.cat .price-span {
+    margin-right: 5px;
+}
+
+h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+button {
+    margin: 5px;
+}
