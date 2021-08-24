@@ -1,10 +1,8 @@
-export const products = [
-    {
-        id: 123,
-        name: 'Tony the Tiger',
-        image: './assets/tony-the-tiger.jpg',
-        description: 'Tony the Tiger is looking for a loving home after the bankruptcy of Nabisco International. Good with kids, other cats, and dogs. Mildy in the uncanny valley. All IP included.',
-        category: 'Corporate Shill Cat',
-        price: '400m'
-    }
-];
+import { renderProduct } from './render-utils.js';
+import { products } from './product-data.js';
+
+const list = document.getElementById('list');
+
+for (let productData of products) {
+    list.appendChild(renderProduct(productData));
+}

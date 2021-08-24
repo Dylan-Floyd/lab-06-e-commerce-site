@@ -17,21 +17,23 @@
     justify-content: space-between;
     align-content: flex-start;
     align-self: stretch;
+    justify-self: stretch;
+    width: 100%;
 }
 
 .row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 }
 .cat p {
     margin: 10px 0px;
 }
 
 .cat img {
-    width: 150px;
-    height: 150px;
+    width: 175px;
+    height: 175px;
     margin: 5px;
 }
 
@@ -39,7 +41,15 @@
     margin: 5px 0px;
 }
 
+.cat .price-span {
+    margin-right: 5px;
+}
+
 h3 {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+button {
+    margin: 5px;
 }
