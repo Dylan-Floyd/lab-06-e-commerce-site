@@ -1,29 +1,4 @@
-/*
-Returns a DOM Element that displays the product information.
-
-Example input object:
-    {
-        id: 123,
-        name: 'Tony the Tiger',
-        image: './assets/tony-the-tiger.jpg',
-        description: 'Tony the Tiger is looking for a loving home after the bankruptcy of Nabisco International. Good with kids, other cats, and dogs. Mildy in the uncanny valley. All IP included.',
-        category: 'Corporate Shill Cat',
-        price: '400m'
-    }
-
-Would return:
-    <li id=123 class="cat">
-        <img src="./assets/tony-the-tiger.jpg">
-        <div class="col">
-            <div class="row">
-                <h3>Tony the Tiger</h3>
-                <span class="price-span">Price: $400m</span>
-            </div>
-            <p>Tony the Tiger is looking for a loving home after the bankruptcy of Nabisco International. Good with kids, other cats, and dogs. Mildy in the uncanny valley. All IP included.</p>
-            <span>Category: Corporate Shill Cat</span>
-        </div>
-    </li>
-*/
+//Returns a DOM Element that displays the product information.
 export function renderProduct(productData) {
     const li = document.createElement('li');
     const image = document.createElement('img');
@@ -44,10 +19,10 @@ export function renderProduct(productData) {
     rowDiv2.className = 'row';
     h3.textContent = productData.name;
     priceSpan.className = 'price-span';
-    priceSpan.textContent = `Price: ${productData.price}`;
+    priceSpan.textContent = `Price: ${(productData.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' }))}`;
     paragraph.textContent = productData.description;
     categorySpan.textContent = `Category: ${productData.category}`;
-    buyButton.textContent = 'Buy Now';
+    buyButton.textContent = 'Add to Cart';
     buyButton.addEventListener('click', () => {
         if (productData.name === 'Stella') {
             alert('YOU CAN\'T HAVE HER');
