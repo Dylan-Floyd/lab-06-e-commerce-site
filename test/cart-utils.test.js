@@ -52,7 +52,7 @@ test('addToCart should add a cartItem to the cart if it wasn\'t already there', 
             quantity: 1
         }
     ];
-    addToCart(CAT_CART, 1);
+    addToCart(CAT_CART, 1, 1);
     const actual = getCart(CAT_CART);
     expect.deepEqual(actual, expected);
     useFakeLocalStorage();
@@ -73,7 +73,7 @@ test('addToCart should increment quanitity of existing cart item', expect => {
         }
     ];
     updateCart(CAT_CART, setupData);
-    addToCart(CAT_CART, 1);
+    addToCart(CAT_CART, 1, 1);
     const actual = getCart(CAT_CART);
     expect.deepEqual(actual, expected);
     useFakeLocalStorage();
