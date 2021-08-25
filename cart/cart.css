@@ -49,3 +49,8 @@ table.minimalistBlack tfoot td {
 #table-container {
     width: 100%;
 }
+
+#grandest-total-span {
+    margin-right: 10px;
+    font-weight: 900;
+}

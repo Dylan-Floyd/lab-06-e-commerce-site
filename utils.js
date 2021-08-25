@@ -19,3 +19,15 @@ export function calcOrderTotal(cartData, products) {
     }
     return total.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 }
+
+//write everything thrice
+export function calcMultiOrderTotal(arrayOfObjsWithCartDataAndProducts) {
+    let total = 0;
+    for (let obj of arrayOfObjsWithCartDataAndProducts) {
+        for (let cartItem of obj.cartData) {
+            let price = findById(obj.products, cartItem.id).price;
+            total += cartItem.quantity * price;
+        }
+    }
+    return total.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+}

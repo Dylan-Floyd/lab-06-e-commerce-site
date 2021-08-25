@@ -16,6 +16,8 @@ test('renderProduct should accept a product and return the appropriate element.'
                     '<h3>Tony the Tiger</h3>' +
                     '<div class="row">' +
                         '<span class="price-span">Price: $400,000,000.00</span>' +
+                        // eslint-disable-next-line no-useless-escape
+                        '<select><option value=\"1\">1</option><option value=\"2\">2</option><option value=\"3\">3</option></select>' +
                         '<button>Add to Cart</button>' +
                     '</div>' +
                 '</div>' +
