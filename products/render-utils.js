@@ -1,5 +1,7 @@
+import { addToCart } from '../data/cart-utils.js';
+
 //Returns a DOM Element that displays the product information.
-export function renderProduct(productData) {
+export function renderProduct(productData, cartToAddProductsTo) {
     const li = document.createElement('li');
     const image = document.createElement('img');
     const colDiv = document.createElement('div');
@@ -27,7 +29,7 @@ export function renderProduct(productData) {
         if (productData.name === 'Stella') {
             alert('YOU CAN\'T HAVE HER');
         } else {
-            alert('Congratulations, you purchased ' + productData.name + '!');
+            addToCart(cartToAddProductsTo, productData.id);
         }
     });
     
