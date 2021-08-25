@@ -1,5 +1,19 @@
 import { addToCart } from '../data/cart-utils.js';
 
+function renderQuantitySelector() {
+    const selectEl = document.createElement('select');
+    const qtyOne = document.createElement('option');
+    const qtyTwo = document.createElement('option');
+    const qtyThree = document.createElement('option');
+    qtyOne.value = '1';
+    qtyOne.textContent = '1';
+    qtyTwo.value = '2';
+    qtyTwo.textContent = '2';
+    qtyThree.value = '3';
+    qtyThree.textContent = '3';
+    selectEl.append(qtyOne, qtyTwo, qtyThree);
+    return selectEl;
+}
 //Returns a DOM Element that displays the product information.
 export function renderProduct(productData, cartToAddProductsTo) {
     const li = document.createElement('li');
@@ -11,6 +25,7 @@ export function renderProduct(productData, cartToAddProductsTo) {
     const priceSpan = document.createElement('span');
     const paragraph = document.createElement('p');
     const categorySpan = document.createElement('span');
+    const quantitySelect = renderQuantitySelector();
     const buyButton = document.createElement('button');
 
     li.id = productData.id;
@@ -29,12 +44,13 @@ export function renderProduct(productData, cartToAddProductsTo) {
         if (productData.name === 'Stella') {
             alert('YOU CAN\'T HAVE HER');
         } else {
-            addToCart(cartToAddProductsTo, productData.id);
+            //credit: https://ricardometring.com/getting-the-value-of-a-select-in-javascript
+            let quantity = Number(quantitySelect.options[quantitySelect.selectedIndex].value);
+            addToCart(cartToAddProductsTo, productData.id, quantity);
         }
     });
     
-    rowDiv2.appendChild(priceSpan);
-    rowDiv2.appendChild(buyButton);
+    rowDiv2.append(priceSpan, quantitySelect, buyButton);
     rowDiv.appendChild(h3);
     rowDiv.appendChild(rowDiv2);
     colDiv.appendChild(rowDiv);

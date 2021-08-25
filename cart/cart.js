@@ -33,4 +33,5 @@ orderButton.addEventListener('click', () => {
     alert('You bought stuff! \n' + stringyData);
     updateCart(CAT_CART, []);
     updateCart(FRUIT_CART, []);
+    window.location = '../';
 });

@@ -59,14 +59,14 @@ export function updateCart(cartSpecifier, cartData) {
     myLocalStorage.setItem(cartSpecifier, stringyCart);
 }
 
-export function addToCart(cartSpecifier, productId) {
+export function addToCart(cartSpecifier, productId, quanitity) {
     let cartData = getCart(cartSpecifier);
     let cartItem = findById(cartData, productId);
     if (!cartItem) {
-        cartItem = { id: productId, quantity: 1 };
+        cartItem = { id: productId, quantity: quanitity };
         cartData.push(cartItem);
     } else {
-        cartItem.quantity++;
+        cartItem.quantity += quanitity;
     }
     updateCart(cartSpecifier, cartData);
 }
